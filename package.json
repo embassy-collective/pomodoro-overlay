@@ -9,7 +9,7 @@
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
     "lint": "prettier --plugin-search-dir . --check . && eslint .",
-    "format": "prettier --plugin-search-dir . --write .",
+    "format": "bun x prettier --plugin-search-dir . --write .",
     "seed": "npx vite-node prisma/seed.ts"
   },
   "devDependencies": {
@@ -25,7 +25,7 @@
     "postcss": "^8.4.24",
     "postcss-load-config": "^4.0.1",
     "prettier": "^3.0.3",
-    "prettier-plugin-svelte": "^2.10.1",
+    "prettier-plugin-svelte": "^3.0.3",
     "prisma": "^5.3.1",
     "svelte": "^4.0.5",
     "svelte-adapter-bun": "^0.5.0",
@@ -42,8 +42,10 @@
     "@auth/sveltekit": "^0.3.7",
     "@prisma/client": "^5.3.1",
     "@sveltejs/adapter-vercel": "^3.0.3",
+    "bits-ui": "^0.5.7",
     "clsx": "^2.0.0",
     "radix-icons-svelte": "^1.2.1",
+    "svelte-radix": "^0.6.2",
     "tailwind-merge": "^1.14.0",
     "tailwind-variants": "^0.1.14"
   }
