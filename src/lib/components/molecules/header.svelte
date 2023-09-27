@@ -1,6 +1,7 @@
 <script>
   import Logo from '../atoms/logo.svelte'
   import MainNav from './main-nav.svelte'
+  import ThemeToggle from './theme-toggle.svelte'
   import UserNav from './user-nav.svelte'
 </script>
 
@@ -10,6 +11,7 @@
     <div class="ml-auto flex items-center space-x-4">
       <MainNav class="mx-6" />
       <UserNav />
+      <ThemeToggle />
     </div>
   </div>
 </div>

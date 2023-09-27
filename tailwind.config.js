@@ -78,7 +78,9 @@ const config = {
         sans: [...fontFamily.sans]
       }
     }
-  }
+  },
+  // eslint-disable-next-line @typescript-eslint/no-var-requires
+  plugins: [require('tailwindcss-text-fill-stroke')()]
 }
 
 export default config

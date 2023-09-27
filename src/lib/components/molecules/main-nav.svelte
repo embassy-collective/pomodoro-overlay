@@ -1,6 +1,5 @@
 <script lang="ts">
   import { cn } from '$lib/utils'
-  import ThemeToggle from './theme-toggle.svelte'
 
   let className: string | undefined | null = undefined
   export { className as class }
@@ -13,5 +12,4 @@
   <a href="/examples/dashboard" class="text-sm font-medium text-muted-foreground transition-colors hover:text-primary">
     Discord
   </a>
-  <ThemeToggle />
 </nav>

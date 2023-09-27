@@ -1,9 +1,11 @@
 <script lang="ts">
+  import { goto } from '$app/navigation'
   import { page } from '$app/stores'
   import { signOut } from '@auth/sveltekit/client'
   import * as Avatar from '../ui/avatar'
   import { Button } from '../ui/button'
   import * as DropdownMenu from '../ui/dropdown-menu'
+  import DropdownMenuItem from '../ui/dropdown-menu/dropdown-menu-item.svelte'
 </script>
 
 {#if $page.data.session}
@@ -30,10 +32,11 @@
         </div>
       </DropdownMenu.Label>
       <DropdownMenu.Separator />
-      <DropdownMenu.Item on:click={() => signOut()}>
-        Log out
-        <DropdownMenu.Shortcut>⇧⌘Q</DropdownMenu.Shortcut>
-      </DropdownMenu.Item>
+      <DropdownMenu.Item on:click={() => goto('overlays')}>Dashboard</DropdownMenu.Item>
+      <DropdownMenuItem on:click={() => goto('overlays')}>Create new overlay</DropdownMenuItem>
+
+      <DropdownMenu.Separator />
+      <DropdownMenu.Item on:click={() => signOut()}>Log out</DropdownMenu.Item>
     </DropdownMenu.Content>
   </DropdownMenu.Root>
 {/if}
