@@ -1,14 +1,19 @@
 <script lang="ts">
-  import { page } from '$app/stores'
   import Pomodoro from '$lib/components/molecules/pomodoro.svelte'
-  console.log($page.params)
+  import type { PageData } from './$types'
+  import SettingsForm from './settings-form.svelte'
+  export let data: PageData
 </script>
 
 <div class="container h-full py-6">
-  <div class="grid h-full items-stretch gap-6 md:grid-cols-[1fr_200px]">
-    <div class="hidden flex-col space-y-4 sm:flex md:order-2">Settings go here</div>
-    <div class="md:order-1 flex h-full flex-col space-y-4">
-      <Pomodoro class="w-1/2 h-full" variant={'timer-only'} />
+  <div class="flex gap-4 w-full flex-col md:flex-row">
+    <div class="w-full md:w-1/2 flex-col h-full justify-center text-center gap-2">
+      <h1 class="text-xl font-bold py-4">Settings</h1>
+      <SettingsForm form={data.form} />
+    </div>
+
+    <div class="w-full md:w-1/2 flex h-full flex-col">
+      <Pomodoro class="w-1/2 m-auto" variant={'timer-only'} />
     </div>
   </div>
 </div>
