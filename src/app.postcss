@@ -91,3 +91,25 @@
     @apply bg-background text-foreground;
   }
 }
+
+
+/* Firefox */
+* {
+    scrollbar-width: auto;
+    scrollbar-color: hsl(var(--primary)) hsl(var(--primary));
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 3px;
+}
+
+*::-webkit-scrollbar-track {
+    background: transparent
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: hsl(var(--foreground));
+    border-radius: 0px;
+    border: 1px solid transparent;
+}

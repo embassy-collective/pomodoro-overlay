@@ -29,7 +29,7 @@
             <Button on:click={() => signOut()} variant={'outline'} class="w-full">Sign out</Button>
           </div>
         {:else}
-          <Button variant={'twitch'} on:click={() => signIn('twitch')}>
+          <Button variant={'twitch'} on:click={() => signIn('twitch')} class="text-white">
             <TwitchIcon class="mr-2" /> Sign In with Twitch
           </Button>
         {/if}

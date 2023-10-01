@@ -50,8 +50,8 @@
     {#if variant !== 'timer-only'}
       <div class="mt-4 flex flex-col gap-4 justify-start">
         {#each Array(4) as _, i}
-          <div class="flex gap-2 items-center text-4xl justify-start w-full">
-            <CheckIcon class="w-6 h-6" checked />
+          <div class="flex gap-2 items-center text-2xl justify-start w-full">
+            <CheckIcon class="w-4 h-4" checked />
             <div class="todo">
               <span class="max-w-md todo-text">
                 Todo {i} Lorem ipsum dolor sit amet.
